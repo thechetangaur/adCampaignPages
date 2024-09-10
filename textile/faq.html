@@ -1,0 +1,134 @@
+<style>
+    .faq {
+    font-family: 'mulish';
+
+    padding: 3% 15%;
+}
+button{
+    color: #170F49;
+    border-radius: 14px;
+    border: 2px solid #fff;
+    font-size: 1.5rem;
+    background: transparent;
+    padding: 2% 5%;
+    display: flex; 
+     justify-content: space-between;
+     align-items: center;
+     width: 100%;
+
+}
+.accordion {
+    margin: 2%;
+    color: #170F49;
+    border-radius: 14px;
+    border: 2px solid #fff;
+    box-shadow: 0px 5px 16px 0px #080F340F;
+    font-size: 1.5rem;
+    background: transparent;
+    
+    
+    cursor: pointer;    
+     text-align: left;
+     transition: 0.4s;
+    }
+    
+    .accordion, .accordion:hover {
+    border: 2px solid #FFE4C3;
+    box-shadow: 0px 6px 16px 0px #FFE0BC30;
+    border-radius: 14px;
+
+    }
+
+    
+    
+    .accordion:after {
+      content: '\2B9F';
+      color: #F68F12;
+    transition: .5s;
+    border-radius: 50%;
+    padding: 1.5% ;
+    box-shadow: 0px 5px 16px 0px #080F340F;
+
+      float: right;
+    
+    }
+    
+    .active:after {
+    content: "\2B9D";
+    background: #F68F12;
+    color: white;
+    }
+   
+    
+    .panel {
+    border-radius: 14px;
+                
+        margin: 0;
+    padding: 0 5%;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    
+    color: #6F6C90;
+    font-size: 18px;
+    
+    }
+
+
+
+</style>
+
+
+<section class="faq">
+
+
+    <h1 class="mheading">F&Q</h1>
+
+<div class="accordion">
+
+    <button class="btn">What is a textile Manufacturing ERP system?</button>
+    <div class="panel">
+        <p>A Textile Manufacturing ERP system is software that integrates and manages all aspects of textile production, from inventory to sales, in one platform for improved efficiency and decision-making.</p>
+    </div>
+</div>
+
+    <button class="btn">Does HB cloud 360 erp offer a live demo of the textile product?</button>
+    <div class="panel">
+        <p>HB Cloud 360 ERP is a cloud-based technology accessible from anywhere, offering convenient remote access
+            for users.</p>
+    </div>
+
+    <button class="btn">what are the Challenges in the textile Manufacturing Industry?</button>
+    <div class="panel">
+        <p>Challenges in the textile manufacturing industry include global competition, fluctuating raw material
+            costs, sustainability demands, rapid fashion trends, and labor issues.</p>
+    </div>
+
+    <button class="accordion">Can we access Cloud textile ERP Software from anywhere?</button>
+    <div class="panel">
+        <p>Yes, Cloud textile ERP software enables access from anywhere.</p>
+    </div>
+
+    <button class="accordion">Can you customize ERP Software for textile Manufacturing?</button>
+    <div class="panel">
+        <p>Certainly! With HB Cloud 360 ERP, we provide tailor-made textile ERP software solutions. We analyze your business needs and customize the textile software accordingly.</p>
+    </div>
+</section>
+
+<script>
+    var acc = document.getElementsByClassName("btn");
+    var i;
+
+    for (i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function () {
+            this.classList.toggle("active");
+            var panel = this.nextElementSibling;
+            if (panel.style.maxHeight) {
+                panel.style.maxHeight = null;
+            } else {
+                panel.style.maxHeight = panel.scrollHeight + "px";
+            }
+        });
+    }
+</script>
